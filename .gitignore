@@ -3,3 +3,7 @@ output/
 assets/fotos/
 __pycache__/
 *:Zone.Identifier
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
