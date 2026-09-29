@@ -42,7 +42,7 @@ EXTENSIONES = (".jpg", ".jpeg", ".png", ".webp")
  
 # ---------------------------------------------------------------- medidas (mm)
 ANCHO_CARTA, ALTO_CARTA = 63, 88
-GROSOR_BARAJA = 21   # 54 cartas en papel mate de 350 g/m² (~0,38 mm cada una). Mide el taco real y ajusta
+GROSOR_BARAJA = 25   # medido: 24-25 mm con las 54 cartas impresas en 350 g/m²
 HOLGURA = 1.5        # margen para que las cartas entren y salgan sin forzar
  
 W = ANCHO_CARTA + HOLGURA   # ancho de delante / detrás
@@ -278,12 +278,6 @@ def dibujar(c, caja: Caja, frente: ImageReader, trasera: ImageReader, fuentes, g
             c.line(x1 * mm, y1 * mm, x2 * mm, y2 * mm)
         c.setDash()
  
-        c.setFillGray(0.4)
-        c.setFont("Simbolos", 7)
-        y = (caja.yb - G - LENGUETA - 10) * mm
-        c.drawCentredString(A4[0] / 2, y, "Corta por la línea continua · marca y dobla por la discontinua · pega la pestaña blanca por dentro del lateral izquierdo")
-        c.drawCentredString(A4[0] / 2, y - 10,
-                            f"Interior: {W:.1f} × {H:.1f} × {G:.1f} mm  (baraja de {GROSOR_BARAJA} mm de grosor)")
     c.showPage()
  
  
