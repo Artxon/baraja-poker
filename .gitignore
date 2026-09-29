@@ -1,6 +1,9 @@
 .venv/
 output/
-assets/fotos/
+assets/fotos/*
+assets/caja/*
+assets/reverso/*
+!assets/*/.gitkeep
 __pycache__/
 *:Zone.Identifier
 *.jpg
